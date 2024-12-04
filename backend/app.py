@@ -3,7 +3,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)  # This will allow all origins, you can restrict it later if needed
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
 
 @app.route('/calculate', methods=['POST'])
 def calculate_costs():
