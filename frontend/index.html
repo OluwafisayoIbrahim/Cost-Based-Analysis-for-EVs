@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV vs Fuel Cost Comparison</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Compare Costs: Fuel vs Electric Vehicle</h1>
+    <form id="costForm">
+        <label for="fuel_cost">Fuel Cost (₦/Liter):</label>
+        <input type="number" id="fuel_cost" required><br><br>
+
+        <label for="distance">Distance (km/month):</label>
+        <input type="number" id="distance" required><br><br>
+
+        <label for="fuel_efficiency">Fuel Efficiency (km/L):</label>
+        <input type="number" id="fuel_efficiency" required><br><br>
+
+        <label for="ev_energy_efficiency">EV Energy Efficiency (kWh/100km):</label>
+        <input type="number" id="ev_energy_efficiency" required><br><br>
+
+        <label for="charging_cost">Charging Cost (₦/kWh):</label>
+        <input type="number" id="charging_cost" required><br><br>
+
+        <button type="button" onclick="compareCosts()">Compare Costs</button>
+    </form>
+
+    <div id="results" style="margin-top:20px;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
