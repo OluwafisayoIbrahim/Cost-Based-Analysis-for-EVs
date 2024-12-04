@@ -1,3 +1,2 @@
-gunicorn
-flask
-flask_cors
+Flask==2.1.0
+flask-cors==3.1.1
