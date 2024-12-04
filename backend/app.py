@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)  # This will allow all origins, you can restrict it later if needed
@@ -28,4 +29,5 @@ def calculate_costs():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 10000))  # Use the PORT environment variable if set, otherwise default to 10000
+    app.run(host='0.0.0.0', port=port, debug=True)  # This binds the app to all network interfaces
